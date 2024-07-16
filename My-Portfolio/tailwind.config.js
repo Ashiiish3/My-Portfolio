@@ -11,10 +11,12 @@ module.exports = {
         textColor: "#757575",
         boxBg: "linear-gradient(145deg, #1e2024, #23272b)",
         designColor: "#ff014f",
-        borderColor: "#d1d6db"
+        borderColor: "#d1d6db",
+        textDarkMode: "#c4cfde"
       },
       boxShadow: {
-        boxShadow: "5px 5px 15px #D1D9E6, -5px -5px 15px #ffffff"
+        boxShadowLightMode: "5px 5px 15px #D1D9E6, -5px -5px 15px #ffffff",
+        boxShadowDarkMode: "5px 5px 16px #000000, -5px -5px 16px #545151"
       }
     },
   },

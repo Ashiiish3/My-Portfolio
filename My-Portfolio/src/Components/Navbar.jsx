@@ -7,22 +7,22 @@ import { IoMoonOutline } from "react-icons/io5";
 export default function Navbar() {
   const [mode, setMode] = useState(true)
   return (
-    <div className={`flex justify-between items-center bg-{mode ? lightBodyColor : darkBodyColor} px-12 h-24`}>
+    <div className={`flex justify-between items-center ${mode ? "bg-lightBodyColor": "bg-darkBodyColor"} px-12 h-24 border-opacity-100 border-b-gray-300 border-b-[1px]`} >
       <div className='flex justify-between items-center'>
-        <img src={logo} alt={logo} height={65} width={65} className='rounded-full border-[3px] border-borderColor' />
-        <h2 className='ms-3 text-xl font-medium'>Ashish</h2>
+        <img src={logo} alt={logo} height={65} width={65} className={`rounded-full border-[3px] ${mode ? "border-borderColor" : "border-[#494949]"}`} />
+        <h2 className={`ms-3 text-xl font-medium ${mode ? "text-black" : "text-textDarkMode"}`}>Ashish</h2>
       </div>
-      <div className='flex justify-between items-center gap-10'>
-        <ul className='flex justify-between gap-10 uppercase text-textColor font-medium'>
-            <li className='hover:text-black cursor-pointer'><Link activeClass="active" to="test1" spy={true} smooth={true} offset={50} duration={500} >Home</Link></li>
-            <li className='hover:text-black cursor-pointer'><Link activeClass="active" to="test1" spy={true} smooth={true} offset={50} duration={500} >Skills</Link></li>
-            <li className='hover:text-black cursor-pointer'><Link activeClass="active" to="test1" spy={true} smooth={true} offset={50} duration={500} >Projects</Link></li>
-            <li className='hover:text-black cursor-pointer'><Link activeClass="active" to="test1" spy={true} smooth={true} offset={50} duration={500} >Resume</Link></li>
-            <li className='hover:text-black cursor-pointer'><Link activeClass="active" to="test1" spy={true} smooth={true} offset={50} duration={500} >Contacts</Link></li>
+      <div className='flex justify-between items-center gap-12'>
+        <ul className={`flex justify-between gap-14 uppercase ${mode ? "text-textColor": "text-textDarkMode"} font-medium`}>
+            <li className={`${mode ? "hover:text-black" : "hover:text-white"} cursor-pointer`}><Link activeClass="active" to="test1" spy={true} smooth={true} offset={50} duration={500} >Home</Link></li>
+            <li className={`${mode ? "hover:text-black" : "hover:text-white"} cursor-pointer`}><Link activeClass="active" to="test1" spy={true} smooth={true} offset={50} duration={500} >Skills</Link></li>
+            <li className={`${mode ? "hover:text-black" : "hover:text-white"} cursor-pointer`}><Link activeClass="active" to="test1" spy={true} smooth={true} offset={50} duration={500} >Projects</Link></li>
+            <li className={`${mode ? "hover:text-black" : "hover:text-white"} cursor-pointer`}><Link activeClass="active" to="test1" spy={true} smooth={true} offset={50} duration={500} >Resume</Link></li>
+            <li className={`${mode ? "hover:text-black" : "hover:text-white"} cursor-pointer`}><Link activeClass="active" to="test1" spy={true} smooth={true} offset={50} duration={500} >Contacts</Link></li>
         </ul>
         <div>
-          <div className='cursor-pointer p-3 rounded-full text-xl shadow-boxShadow bg-gradient-to-tl from-[#ffffff] to-[#e2e8ec]' onClick={()=>setMode(!mode)}>
-            {mode ? <RxSun /> : <IoMoonOutline />}
+          <div className={`cursor-pointer p-3 rounded-full text-xl ${mode ? "shadow-boxShadowLightMode bg-gradient-to-tl from-[#ffffff] to-[#e2e8ec]": "shadow-boxShadowDarkMode"}`} onClick={()=>setMode(!mode)}>
+            {mode ?  <IoMoonOutline className='text-black' /> : <RxSun className='text-white' />  }
           </div>
         </div>
       </div>
