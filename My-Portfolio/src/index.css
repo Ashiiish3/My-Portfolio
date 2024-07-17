@@ -14,3 +14,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@layer {
+  .BannerIcon{
+    @apply p-5 rounded-md 
+  }
+}

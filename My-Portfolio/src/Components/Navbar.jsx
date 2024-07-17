@@ -9,7 +9,9 @@ export default function Navbar() {
   return (
     <div className={`flex justify-between items-center ${mode ? "bg-lightBodyColor": "bg-darkBodyColor"} px-12 h-24 border-opacity-100 border-b-gray-300 border-b-[1px]`} >
       <div className='flex justify-between items-center'>
-        <img src={logo} alt={logo} height={65} width={65} className={`rounded-full border-[3px] ${mode ? "border-borderColor" : "border-[#494949]"}`} />
+        <div className={`rounded-full border-[3px] ${mode ? "border-borderColor" : "border-[#494949]"}`}>
+          <img src={logo} alt={logo} height={65} width={65} className='rounded-full brightness-110' />
+        </div>
         <h2 className={`ms-3 text-xl font-medium ${mode ? "text-black" : "text-textDarkMode"}`}>Ashish</h2>
       </div>
       <div className='flex justify-between items-center gap-12'>
