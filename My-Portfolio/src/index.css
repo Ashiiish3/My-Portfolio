@@ -14,9 +14,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-@layer {
+@layer components {
   .BannerIcon{
-    @apply p-5 rounded-md 
+    @apply p-5 rounded-md text-xl shadow-boxShadowLightMode cursor-pointer hover:-translate-y-1 hover:text-white text-textColor hover:bg-linearGradients duration-300
   }
 }
