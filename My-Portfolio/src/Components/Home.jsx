@@ -5,6 +5,8 @@ import { LuLinkedin } from "react-icons/lu";
 import { FaInstagram } from "react-icons/fa";
 import { FiTwitter } from "react-icons/fi";
 import { FiGithub } from "react-icons/fi";
+import { LuDownload } from "react-icons/lu";
+import { Link, NavLink } from "react-router-dom";
 
 export default function Home() {
   const [text] = useTypewriter({
@@ -15,7 +17,7 @@ export default function Home() {
     // delaySpeed: 2000,
   })
   return (
-    <section className="bg-lightBodyColor py-16 border-opacity-100 border-b-gray-300 border-b-[1px]">
+    <section id="Home" className="bg-lightBodyColor h-[89vh] py-16 flex border-opacity-100 border-b-gray-300 border-b-[1px]">
       <div className="max-w-[68%] flex justify-between items-center m-auto gap-10">
         <div className="w-[50%] text-start">
           <p className="uppercase tracking-widest">
@@ -31,23 +33,34 @@ export default function Home() {
           <div>
             <p className="uppercase text-textColor text-[14px] font-medium tracking-widest mt-14">You can find me</p>
             <div className="flex gap-4 mt-5">
-              <span className="BannerIcon">
-                <LuLinkedin />
-              </span>
-              <span className="BannerIcon">
-                <FaInstagram />
-              </span>
-              <span className="BannerIcon">
-                <FiTwitter />
-              </span>
-              <span className="BannerIcon">
-                <FiGithub />
-              </span>
+              <NavLink to={"https://www.linkedin.com/in/ashish-sharma-b0a6632b0"} target="_blank" className="BannerIcon">
+                <span>
+                  <LuLinkedin />
+                </span>
+              </NavLink>
+              <NavLink to={"https://www.instagram.com/the.ashu_3/?igsh=MTIxdHlhZjF1aG16MQ%3D%3D"} target="_blank" className="BannerIcon">
+                <span>
+                  <FaInstagram />
+                </span>
+              </NavLink>
+              <NavLink className="BannerIcon">
+                <span>
+                  <FiTwitter />
+                </span>
+              </NavLink>
+              <NavLink to={"https://github.com/Ashiiish3"} className="BannerIcon" target="_blank">
+                <span>
+                  <FiGithub />
+                </span>
+              </NavLink>
+            </div>
+            <div className="BannerIcon mt-6 w-72">
+              <span className="flex items-center justify-evenly m-auto">Download Resume <LuDownload /></span>
             </div>
           </div>
         </div>
         <div className="w-[50%] flex justify-center">
-          <div className="animateBox p-3 rounded-full h-[500px] w-[500px] animate-gradient bg-bannerBgColor">
+          <div className="flex p-4 rounded-full h-[600px] w-[600px] bg-200% animate-moveGradient bg-bannerBgColor">
             <img src={logo} alt={logo} className="brightness-125" />
           </div>
         </div>
