@@ -17,8 +17,8 @@ export default function Home() {
     // delaySpeed: 2000,
   })
   return (
-    <section id="Home" className="bg-lightBodyColor h-[89vh] py-16 flex border-opacity-100 border-b-gray-300 border-b-[1px]">
-      <div className="max-w-[68%] flex justify-between items-center m-auto gap-10">
+    <section id="Home" className="bg-lightBodyColor h-[89vh] flex">
+      <div className="max-w-[68%] flex justify-between items-center m-auto gap-10 py-[108px] border-b-gray-300 border-b-[1px]">
         <div className="w-[50%] text-start">
           <p className="uppercase tracking-widest">
             Welcome to my Website

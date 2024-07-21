@@ -20,3 +20,14 @@ code {
     @apply p-5 rounded-md text-xl shadow-boxShadowLightMode cursor-pointer hover:-translate-y-1 hover:text-white text-textColor hover:bg-linearGradients duration-[300ms]
   }
 }
+.skill-images{
+  height: 200px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.number{
+  -webkit-text-stroke: 0.1rem #ff014f;
+}
