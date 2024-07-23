@@ -6,6 +6,8 @@ import Bootstrap from '../Assets/Images/Bootstrap.png'
 import React from '../Assets/Images/React-js.png'
 import DeathWisCoffeehWebsite from '../Assets/Images/Death-wish-coffee-website-image.png'
 import FlipkartWebsite from '../Assets/Images/Flipkart-image.jpg'
+import PetdogWebsite from '../Assets/Images/Petdog-website-image.jpg'
+import HighTechWebsite from '../Assets/Images/HigtTech-image.jpg'
 
 export const skillsImagesData = [
     {
@@ -42,30 +44,39 @@ export const skillsImagesData = [
 
 export const projectData = [
     {
-        id: "01",
+        number: "01",
         title: "Death Wish Coffee Website",
         description: " This project is clone of Death wish coffee website which is a coffee brand based in the United States. Their coffee is primarily sold online, but can also be found in grocery stores across the United States.",
-        languageName: "HTML5, CSS3, Javascript, Bootstrap, JSON-Server",
+        language: [{name: "HTML 5"}, {name: "CSS 3"}, {name:"Javascript"},{name:"Bootstrap"},{name:"JSON-Server"}],
         image: DeathWisCoffeehWebsite,
         projectLink: "https://death-wish-coffee-website.vercel.app/",
         githubLink: "https://github.com/Ashiiish3/Death-Wish-Coffee-Clone"
     },
     {
-        id: "02",
+        number: "02",
         title: "Flipkart Clone",
         description: "This project is clone of Flipkart website India's biggest online store for Mobiles, Fashion (Clothes/Shoes), Electronics, Home Appliances, Books, Home, Furniture, Grocery, Jewelry, Sporting goods etc.",
-        languageName: "HTML5, CSS3, Javascript, Bootstrap, JSON-Server",
+        language: [{name: "HTML 5"}, {name: "CSS 3"}, {name:"Javascript"},{name:"JSON-Server"},{name:"Bootstrap"}],
         image: FlipkartWebsite,
         projectLink: "https://flipkart-clone-pi-vert.vercel.app/",
         githubLink: "https://github.com/Ashiiish3/Flipkart-Clone"
     },
     {
-        id: "03",
-        title: "Flipkart Clone",
-        description: "This project is clone of Flipkart website India's biggest online store for Mobiles, Fashion (Clothes/Shoes), Electronics, Home Appliances, Books, Home, Furniture, Grocery, Jewelry, Sporting goods etc.",
-        languageName: "HTML5, CSS3, Javascript, Bootstrap, JSON-Server",
-        image: FlipkartWebsite,
-        projectLink: "https://flipkart-clone-pi-vert.vercel.app/",
-        githubLink: "https://github.com/Ashiiish3/Flipkart-Clone"
+        number: "03",
+        title: "Veterinarian Website",
+        description: "A veterinarian website typically refers to an online platform that provides information, resources, and services related to veterinary medicine and animal care.",
+        language: [{name: "HTML 5"}, {name: "CSS 3"}, {name:"Javascript"},{name:"Bootstrap"}],
+        image: PetdogWebsite,
+        projectLink: "https://pethealth-website.000webhostapp.com/",
+        githubLink: "https://github.com/Ashiiish3/AS-Websites/tree/main/Dog%20Hospital%20Website"
+    },
+    {
+        number: "04",
+        title: "HighTech Website Clone",
+        description: "This project is a clone of HighTech Website that emphasizes the use of advanced technologies and modern design. This term is often associated with sectors that focus on technological innovation, including electronics, computers, and various scientific fields.",
+        language: [{name: "HTML 5"}, {name: "CSS 3"}, {name:"Javascript"},{name:"Bootstrap"},{name:"JQuery"}],
+        image: HighTechWebsite,
+        projectLink: "https://as-hightech.000webhostapp.com/",
+        githubLink: "https://github.com/Ashiiish3/AS-Websites/tree/main/HighTech%20Website%20Template"
     }
 ]
