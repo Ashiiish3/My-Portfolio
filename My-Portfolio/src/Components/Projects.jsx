@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "swiper/css";
 import { projectData } from "../Constant/index";
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -8,6 +7,7 @@ import { TbExternalLink } from "react-icons/tb";
 import { FaGithub } from "react-icons/fa6";
 import { Swiper, SwiperSlide } from "swiper/react";
 import WorkSliderBtns from "./WorkSliderBtns";
+import "swiper/css";
 
 export default function Projects() {
   const [project, setProject] = useState(projectData[0]);
@@ -31,7 +31,7 @@ export default function Projects() {
         >
           <div className="container mx-auto">
             <div className="flex flex-col xl:flex-row gap-10">
-              <div className="w-full xl:w-[50%] text-start">
+              <div className="w-full xl:w-[50%] text-start order-2 xl:order-none">
                 <h1 className="number text-8xl leading-none font-bold text-transparent">
                   {project.number}
                 </h1>
@@ -88,23 +88,21 @@ export default function Projects() {
                   spaceBetween={30}
                   slidesPerView={1}
                   className="w-full bg-yellow-600"
-                  onSlideChange={handleSlideChange}
+                  onSlideChange={(swiper)=>handleSlideChange(swiper)}
                 >
-                  <div className="flex flex-row w-full">
                     {projectData.map((oneProject, index) => {
                       return (
                         <SwiperSlide key={index} className="w-full">
-                          <div className="w-full h-full group flex justify-center items-center">
+                          <div className="w-full h-[400px] group flex justify-center items-center bg-purple-300">
                             <img
                               src={project.image}
                               alt=""
-                              className="object-cover"
+                              className="object-contain"
                             />
                           </div>
                         </SwiperSlide>
                       );
                     })}
-                  </div>
                   <WorkSliderBtns
                     containerStyles="z-50 flex gap-5"
                     btnStyles="bg-lightBodyColor shadow-boxShadowLightMode p-2 rounded-full"

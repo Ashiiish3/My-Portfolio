@@ -4,6 +4,7 @@ import JavaScript from '../Assets/Images/JavaScript.png'
 import TailwindCss from '../Assets/Images/Tailwind-CSS.png'
 import Bootstrap from '../Assets/Images/Bootstrap.png'
 import React from '../Assets/Images/React-js.png'
+import ViteLogo from '../Assets/Images/Vite-js-logo.png'
 import DeathWisCoffeehWebsite from '../Assets/Images/Death-wish-coffee-website-image.png'
 import FlipkartWebsite from '../Assets/Images/Flipkart-image.jpg'
 import PetdogWebsite from '../Assets/Images/Petdog-website-image.jpg'
@@ -39,6 +40,11 @@ export const skillsImagesData = [
         id: "S6",
         image:React,
         name: "React JS"
+    },
+    {
+        id: "S7",
+        image:ViteLogo,
+        name: "React JS"
     }
 ]
 
@@ -46,7 +52,7 @@ export const projectData = [
     {
         number: "01",
         title: "Death Wish Coffee Website",
-        description: " This project is clone of Death wish coffee website which is a coffee brand based in the United States. Their coffee is primarily sold online, but can also be found in grocery stores across the United States.",
+        description: "This project is clone of Death wish coffee website which is a coffee brand based in the United States. Their coffee is primarily sold online, but can also be found in grocery stores across the United States.",
         language: [{name: "HTML 5"}, {name: "CSS 3"}, {name:"Javascript"},{name:"Bootstrap"},{name:"JSON-Server"}],
         image: DeathWisCoffeehWebsite,
         projectLink: "https://death-wish-coffee-website.vercel.app/",

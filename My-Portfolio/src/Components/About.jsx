@@ -1,21 +1,20 @@
-import React from "react";
+import React from 'react'
 import { useTypewriter, Cursor } from 'react-simple-typewriter'
 import logo from '../Assets/Images/Logo.png'
 import { LuLinkedin } from "react-icons/lu";
 import { FaInstagram } from "react-icons/fa";
-import { FiTwitter } from "react-icons/fi";
+import { FaXTwitter } from "react-icons/fa6";
 import { FiGithub } from "react-icons/fi";
 import { LuDownload } from "react-icons/lu";
 import { Link, NavLink } from "react-router-dom";
 
-export default function Home() {
-  const [text] = useTypewriter({
-    words: ['Frontend Developer.', 'Backend Developer.'],
-    loop: true,
-    typeSpeed: 30,
-    deleteSpeed: 20,
-    // delaySpeed: 2000,
-  })
+export default function About() {
+    const [text] = useTypewriter({
+        words: ['Frontend Developer.', 'Backend Developer.'],
+        loop: true,
+        typeSpeed: 30,
+        deleteSpeed: 20,
+      })
   return (
     <section id="Home" className="bg-lightBodyColor h-[89vh] flex">
       <div className="max-w-[68%] flex justify-between items-center m-auto gap-10 py-[108px] border-b-gray-300 border-b-[1px]">
@@ -45,7 +44,7 @@ export default function Home() {
               </NavLink>
               <NavLink className="BannerIcon">
                 <span>
-                  <FiTwitter />
+                  <FaXTwitter />
                 </span>
               </NavLink>
               <NavLink to={"https://github.com/Ashiiish3"} className="BannerIcon" target="_blank">
@@ -66,5 +65,5 @@ export default function Home() {
         </div>
       </div>
     </section>
-  );
+  )
 }

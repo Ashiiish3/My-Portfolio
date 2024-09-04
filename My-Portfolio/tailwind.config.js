@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       colors: {
         darkBodyColor: "#212428",
-        lightBodyColor: "#ecf0f3",
+        lightBodyColor: "transparent",
         textColor: "#757575",
         designColor: "#ff014f",
         borderColor: "#d1d6db",
