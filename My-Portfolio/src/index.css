@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -17,7 +17,7 @@ code {
 }
 @layer components {
   .BannerIcon{
-    @apply w-16 p-5 rounded-md text-xl shadow-boxShadowLightMode cursor-pointer hover:-translate-y-1 hover:text-white text-textColor hover:bg-linearGradients duration-[300ms]
+    @apply p-5 rounded-md text-xl bg-[#ecf0f3] shadow-boxShadowLightMode cursor-pointer hover:text-white hover:bg-linearGradients duration-[300ms]
   }
 }
 .skill-images{

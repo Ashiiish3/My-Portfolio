@@ -21,6 +21,7 @@ module.exports = {
       },
       animation: {
         moveGradient: "moveGradient 2s linear infinite",
+        spinSetting: "spinSetting 2s linear infinite"
       },
       keyframes: {
         moveGradient: {
@@ -34,6 +35,16 @@ module.exports = {
             "background-position": "0% 50%",
           },
         },
+      },
+      keyframes: {
+        spinSetting: {
+          "from": {
+            "transform": "rotate(0deg)"
+          },
+          "to" : {
+            "transform": "rotate(360deg)"
+          }
+        }
       },
       backgroundSize:{
         "200%": "200%"

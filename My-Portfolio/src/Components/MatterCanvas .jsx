@@ -1,12 +1,14 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import Matter from 'matter-js';
 import 'matter-wrap';
 import 'matter-attractors';
+import { ThemeContext } from '../ContextAPI/ContextAPI';
 
 const MatterCanvas = () => {
   const canvasRef = useRef(null);
-  const [mode, setMode] = useState(true)
-
+  const {themeChange} = useContext(ThemeContext);
+  const renderRef = useRef(null); // Add a ref to keep track of the Matter.js render instance
+  
   useEffect(() => {
     const dimensions = {
       width: window.innerWidth,
@@ -39,9 +41,11 @@ const MatterCanvas = () => {
         width: dimensions.width,
         height: dimensions.height,
         wireframes: false,
-        background: `${mode ? "#ecf0f3": "#111111"}`,
+        background: themeChange ? "#ecf0f3" : "#111111",
       },
     });
+
+    renderRef.current = render; // Save the render instance in the ref for future access
 
     const runner = Runner.create();
     const world = engine.world;
@@ -50,11 +54,11 @@ const MatterCanvas = () => {
     const attractiveBody = Bodies.circle(
       render.options.width / 2,
       render.options.height / 2,
-      Math.max(dimensions.width / 4, dimensions.height / 4) / 2,
+      Math.max(dimensions.width / 4, dimensions.height / 4) / 13,
       {
         render: {
-          fillStyle: `transparent`,
-          strokeStyle: `rgb(240,240,240)`,
+          fillStyle: `white`,
+          strokeStyle: `rgb(0,0,0)`,
           lineWidth: 0,
         },
         isStatic: true,
@@ -97,7 +101,7 @@ const MatterCanvas = () => {
         friction: 0,
         frictionAir: 0.01,
         render: {
-          fillStyle: r > 0.3 ? `#FF2D6A` : `rgb(240,240,240)`,
+          fillStyle: r > 0.3 ? `#f55684` : `rgb(240,240,240)`,
           strokeStyle: `#E9202E`,
           lineWidth: 2,
         },
@@ -121,7 +125,7 @@ const MatterCanvas = () => {
         friction: 0.6,
         frictionAir: 0.8,
         render: {
-          fillStyle: `rgb(240,240,240)`,
+          fillStyle: `rgb(237,237,237)`,
           strokeStyle: `#FFFFFF`,
           lineWidth: 3,
         },
@@ -158,6 +162,13 @@ const MatterCanvas = () => {
     };
   }, []);
 
+  // This useEffect updates the background when themeChange changes
+  useEffect(() => {
+    if (renderRef.current) {
+      renderRef.current.options.background = themeChange ? "#ecf0f3" : "#111111";
+    }
+  }, [themeChange]);
+
   return (
     <div
       ref={canvasRef}
@@ -171,4 +182,5 @@ const MatterCanvas = () => {
     />
   );
 };
+
 export default MatterCanvas;
