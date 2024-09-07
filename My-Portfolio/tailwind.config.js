@@ -13,7 +13,7 @@ module.exports = {
       },
       boxShadow: {
         boxShadowLightMode: "5px 5px 15px #D1D9E6, -5px -5px 15px #ffffff",
-        boxShadowDarkMode: "5px 5px 16px #000000, -5px -5px 16px #545151",
+        boxShadowDarkMode: "5px 5px 16px rgba(015,015,015,0.4), -5px -5px 10px rgba(070,070,070,0.4)",
       },
       backgroundImage: {
         linearGradients: "linear-gradient(145deg, #6a67ce, #fc636b)",

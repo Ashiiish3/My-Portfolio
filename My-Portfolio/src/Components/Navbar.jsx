@@ -1,8 +1,6 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import logo from '../Assets/Images/Logo.png'
 import {Link} from 'react-scroll'
-import { RxSun } from "react-icons/rx";
-import { IoMoonOutline } from "react-icons/io5";
 import { ThemeContext } from '../ContextAPI/ContextAPI';
 
 export default function Navbar() {
@@ -24,11 +22,6 @@ export default function Navbar() {
               <li className="hover:text-designColor cursor-pointer"><Link to="test1" spy={true} smooth={true} offset={50} duration={500} >Resume</Link></li>
               <li className="hover:text-designColor cursor-pointer"><Link to="test1" spy={true} smooth={true} offset={50} duration={500} >Contacts</Link></li>
           </ul>
-          {/* <div>
-            <div className={`cursor-pointer p-3 rounded-full text-xl ${mode ? "shadow-boxShadowLightMode bg-gradient-to-tl from-[#ffffff] to-[#e2e8ec]": "shadow-boxShadowDarkMode"}`} onClick={()=>setMode(!mode)}>
-              {mode ?  <IoMoonOutline className='text-black' /> : <RxSun className='text-white' />  }
-            </div>
-          </div> */}
         </div>
       </div>
     </div>

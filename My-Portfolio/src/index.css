@@ -17,8 +17,9 @@ code {
 }
 @layer components {
   .BannerIcon{
-    @apply p-5 rounded-md text-xl bg-[#ecf0f3] shadow-boxShadowLightMode cursor-pointer hover:text-white hover:bg-linearGradients duration-[300ms]
+    @apply p-5 rounded-md text-xl bg-[#ecf0f3] cursor-pointer hover:text-white hover:bg-linearGradients duration-[300ms]
   }
+  
 }
 .skill-images{
   height: 200px;
