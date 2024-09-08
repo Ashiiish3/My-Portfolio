@@ -11,16 +11,11 @@ body {
     overflow-x: hidden;
     font-family: 'Lato', sans-serif;
 }
-/* .container {
-    max-width: 1300px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 50px;
-    display: flex;
-    justify-content: space-between;
+/* for colorPicker component */
+/* .colorPicker{
+  background-color: yellow;
+  left: 80px;
 } */
-/*  
-.canvas {
-    position: fixed;
-    top: 0;
-} */
+/* .active {
+  color: red;
+ } */

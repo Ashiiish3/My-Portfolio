@@ -1,12 +1,14 @@
 import React, { useContext } from 'react'
 import logo from '../Assets/Images/Logo.png'
-import {Link} from 'react-scroll'
-import { ThemeContext } from '../ContextAPI/ContextAPI';
+import { Link } from 'react-scroll'
+import { ColorChangeContext, ThemeContext } from '../ContextAPI/ContextAPI';
+import styled from 'styled-components';
 
 export default function Navbar() {
   const {themeChange} = useContext(ThemeContext);
+  const { colorHandle } = useContext(ColorChangeContext);
   return (
-    <div className={`fixed w-full backdrop-blur-md flex top-0 z-10 px-12 h-24 border-opacity-100 border-b-gray-300 border-b-[1px]`} >
+    <div className={`fixed w-full backdrop-blur-md flex top-0 z-10 px-12 h-24 border-opacity-100 border-b-${themeChange ? "gray-300" : "gray-500"} border-b-[1px]`} >
       <div className='max-w-[72%] w-full flex justify-between items-center m-auto'>
         <div className=' flex justify-between items-center'>
           <div className={`rounded-full border-[3px] ${themeChange ? "border-borderColor" : "border-[#494949]"}`}>
@@ -16,14 +18,18 @@ export default function Navbar() {
         </div>
         <div className='flex justify-between items-center gap-12'>
           <ul className={`flex justify-between gap-14 uppercase ${themeChange ? "text-black": "text-white"} font-semibold`}>
-              <li className="hover:text-designColor cursor-pointer"><Link activeClass="active" to="Home" spy={true} smooth={true} offset={-100} duration={500} >Home</Link></li>
-              <li className="hover:text-designColor cursor-pointer"><Link to="Skills" spy={true} smooth={true} offset={50} duration={500} >Skills</Link></li>
-              <li className="hover:text-designColor cursor-pointer"><Link to="test1" spy={true} smooth={true} offset={50} duration={500} >Projects</Link></li>
-              <li className="hover:text-designColor cursor-pointer"><Link to="test1" spy={true} smooth={true} offset={50} duration={500} >Resume</Link></li>
-              <li className="hover:text-designColor cursor-pointer"><Link to="test1" spy={true} smooth={true} offset={50} duration={500} >Contacts</Link></li>
+              <NavItem colorhandle={colorHandle} className="cursor-pointer"><Link activeStyle={{color:colorHandle}} to="Home" spy={true} smooth={true} offset={-100} duration={500} >Home</Link></NavItem>
+              <NavItem colorhandle={colorHandle} className="cursor-pointer"><Link activeStyle={{color:colorHandle}} to="Skills" spy={true} smooth={true} offset={0} duration={500} >Skills</Link></NavItem>
+              <NavItem colorhandle={colorHandle} className="cursor-pointer"><Link activeStyle={{color:colorHandle}} to="test1" spy={true} smooth={true} offset={50} duration={500} >Projects</Link></NavItem>
+              <NavItem colorhandle={colorHandle} className="cursor-pointer"><Link activeStyle={{color:colorHandle}} to="test1" spy={true} smooth={true} offset={50} duration={500} >Resume</Link></NavItem>
+              <NavItem colorhandle={colorHandle} className="cursor-pointer"><Link activeStyle={{color:colorHandle}} to="test1" spy={true} smooth={true} offset={50} duration={500} >Contacts</Link></NavItem>
           </ul>
         </div>
       </div>
     </div>
   )
 }
+const NavItem = styled.div`
+&:hover {
+    color: ${({colorhandle})=> colorhandle };
+`;

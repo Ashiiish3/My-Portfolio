@@ -5,6 +5,10 @@ import TailwindCss from '../Assets/Images/Tailwind-CSS.png'
 import Bootstrap from '../Assets/Images/Bootstrap.png'
 import React from '../Assets/Images/React-js.png'
 import ViteLogo from '../Assets/Images/Vite-js-logo.png'
+import ReactRedux from '../Assets/Images/React-Redux.png'
+import JSONServer from '../Assets/Images/JSON-Server.png'
+import Firebase from '../Assets/Images/Firebase.png'
+import Vercel from '../Assets/Images/Vercel.png'
 import DeathWisCoffeehWebsite from '../Assets/Images/Death-wish-coffee-website-image.png'
 import FlipkartWebsite from '../Assets/Images/Flipkart-image.jpg'
 import PetdogWebsite from '../Assets/Images/Petdog-website-image.jpg'
@@ -44,7 +48,27 @@ export const skillsImagesData = [
     {
         id: "S7",
         image:ViteLogo,
-        name: "React JS"
+        name: "Vite"
+    },
+    {
+        id: "S8",
+        image:ReactRedux,
+        name: "React-Redux"
+    },
+    {
+        id: "S9",
+        image:JSONServer,
+        name: "JSON-Server"
+    },
+    {
+        id: "S10",
+        image:Firebase,
+        name: "Firebase"
+    },
+    {
+        id: "S11",
+        image:Vercel,
+        name: "Vercel"
     }
 ]
 

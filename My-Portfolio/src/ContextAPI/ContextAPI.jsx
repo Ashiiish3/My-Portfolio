@@ -13,7 +13,7 @@ export const ThemeContextProvider = ({children}) => {
 export const ColorChangeContext = createContext()
 
 export const ColorChangeContextProvider = ({children}) => {
-    const color = [
+    const colors = [
         "#ff014f",
         "#c4096a",
         "#64ce23",
@@ -25,6 +25,9 @@ export const ColorChangeContextProvider = ({children}) => {
         "#37b182",
         "#49bdf3",
         "#1854b4",
+        "#00F7F7"
     ]
-    return <ColorChangeContext.Provider value={{color}}>{children}</ColorChangeContext.Provider>
+    const [colorHandle, setColorHandle] = useState("#ff014f")
+    const [showColorPicker, setShowColorPicker] = useState(true)
+    return <ColorChangeContext.Provider value={{colors, colorHandle, setColorHandle, showColorPicker, setShowColorPicker}}>{children}</ColorChangeContext.Provider>
 }

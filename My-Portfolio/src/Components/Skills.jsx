@@ -11,7 +11,7 @@ export default function Skills() {
         </h1>
         <div className="grid grid-cols-3 mt-12 gap-10">
           {skillsImagesData.map((skill) => (
-            <div key={skill.id} className="py-5 bg-white shadow-xl">
+            <div key={skill.id} className="py-5 bg-white shadow-xl rounded-2xl">
               <div className="skill-images">
                 <img src={skill.image} alt=""/>
               </div>
