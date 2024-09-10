@@ -19,7 +19,13 @@ code {
   .BannerIcon{
     @apply p-5 rounded-md text-xl bg-[#ecf0f3] cursor-pointer hover:text-white hover:bg-linearGradients duration-[300ms]
   }
-  
+}
+/* for Skills Components */
+.skill-box{
+  border: 1px solid transparent;
+}
+.skill-box:hover .skill-images{
+  scale: 1.25;
 }
 .skill-images{
   height: 80px;
@@ -28,7 +34,18 @@ code {
   justify-content: center;
   align-items: center;
   margin: auto;
+  transition: 0.5s all;
 }
 .number{
   -webkit-text-stroke: 0.1rem #ff014f;
+}
+/* for Projects Components */
+.project-heading::after{
+  content: '';
+  height: 3px;
+  width: 100%;
+  display: block;
+  position: absolute;
+  bottom: 0%;
+  margin: auto;
 }

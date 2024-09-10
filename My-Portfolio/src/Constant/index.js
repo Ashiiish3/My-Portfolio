@@ -72,6 +72,13 @@ export const skillsImagesData = [
     }
 ]
 
+export const ProjectImages = {
+    DeathWisCoffeehWebsite,
+    FlipkartWebsite,
+    PetdogWebsite,
+    HighTechWebsite
+}
+
 export const projectData = [
     {
         number: "01",

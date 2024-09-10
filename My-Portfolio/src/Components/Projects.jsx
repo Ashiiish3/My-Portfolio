@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { projectData } from "../Constant/index";
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -8,112 +8,71 @@ import { FaGithub } from "react-icons/fa6";
 import { Swiper, SwiperSlide } from "swiper/react";
 import WorkSliderBtns from "./WorkSliderBtns";
 import "swiper/css";
+import { ThemeContext } from "../ContextAPI/ContextAPI";
+import { ColorChangeContext } from "../ContextAPI/ContextAPI";
+import styled from "styled-components";
+import { ProjectImages } from '../Constant/index'
 
 export default function Projects() {
+  const {themeChange} = useContext(ThemeContext);
+  const { colorHandle } = useContext(ColorChangeContext);
   const [project, setProject] = useState(projectData[0]);
   const handleSlideChange = (swiper) => {
     const currenInd = swiper.activeIndex;
     setProject(projectData[currenInd]);
   };
   return (
-    <section className="bg-lightBodyColor">
-      <div className="max-w-[68%] m-auto py-24 border-b-gray-300 border-b-[1px]">
-        <p className="uppercase text-designColor tracking-widest font-medium">
+    <section id="Projects" className={`${themeChange ? "bg-[#ecf0f3]" : "bg-[#111111]"}`}>
+      <div className="max-w-[68%] m-auto py-28 mb-32 border-b-gray-300 border-b-[1px]">
+        <p className="uppercase tracking-widest font-bold" style={{color: colorHandle}}>
           Projects
         </p>
-        <h1 className="mt-1 text-6xl font-Montserratt font-[600] text-darkBodyColor">
+        <ProjectHeading colorhandle={colorHandle} className='pb-5 relative inline-block mt-1 text-5xl font-Montserratt font-[600]' style={{color: themeChange ? "black" : "white"}}>
           My Projects
-        </h1>
-        <motion.section
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="mt-12 flex flex-col justify-center"
-        >
-          <div className="container mx-auto">
-            <div className="flex flex-col xl:flex-row gap-10">
-              <div className="w-full xl:w-[50%] text-start order-2 xl:order-none">
-                <h1 className="number text-8xl leading-none font-bold text-transparent">
-                  {project.number}
-                </h1>
-                <h3 className="mt-4 text-sm lg:text-3xl font-medium">
-                  {project.title}
-                </h3>
-                <p className="mt-3 font-medium text-md tracking-wide font-Montserratt text-textColor">
-                  {project.description}
-                </p>
-                <ul className="flex mt-4 text-designColor font-medium font-Montserratt tracking-wide gap-3">
-                  {project.language.map((ele, index) => {
-                    return (
-                      <li key={index}>
-                        {ele.name}{" "}
-                        {index !== project.language.length - 1 && ","}
-                      </li>
-                    );
-                  })}
-                </ul>
-                <hr className="my-4 border-gray-400" />
-                <div className="flex gap-3">
-                  <div className="bg-lightBodyColor shadow-boxShadowLightMode p-3 rounded-full hover:bg-linearGradients hover:text-white">
-                    <NavLink
-                      className="project-link text-2xl"
-                      to={project.projectLink}
-                      target="_blank"
-                    >
-                      <span>
-                        <TbExternalLink />
-                      </span>
-                    </NavLink>
-                    <Tooltip anchorSelect=".project-link" place="top">
-                      Live Project
-                    </Tooltip>
-                  </div>
-                  <div className="bg-lightBodyColor shadow-boxShadowLightMode p-3 rounded-full hover:bg-linearGradients hover:text-white">
-                    <NavLink
-                      className="github-link text-2xl"
-                      to={project.githubLink}
-                      target="_blank"
-                    >
-                      <span>
-                        <FaGithub />
-                      </span>
-                    </NavLink>
-                    <Tooltip anchorSelect=".github-link" place="top">
-                      Github Link
-                    </Tooltip>
-                  </div>
-                </div>
-              </div>
-              <div className="w-full xl:w-[50%] bg-red-600">
-                <Swiper
-                  spaceBetween={30}
-                  slidesPerView={1}
-                  className="w-full bg-yellow-600"
-                  onSlideChange={(swiper)=>handleSlideChange(swiper)}
-                >
-                    {projectData.map((oneProject, index) => {
-                      return (
-                        <SwiperSlide key={index} className="w-full">
-                          <div className="w-full h-[400px] group flex justify-center items-center bg-purple-300">
-                            <img
-                              src={project.image}
-                              alt=""
-                              className="object-contain"
-                            />
-                          </div>
-                        </SwiperSlide>
-                      );
-                    })}
-                  <WorkSliderBtns
-                    containerStyles="z-50 flex gap-5"
-                    btnStyles="bg-lightBodyColor shadow-boxShadowLightMode p-2 rounded-full"
-                    iconStyles="text-2xl text-designColor"
-                  />
-                </Swiper>
-              </div>
+        </ProjectHeading>
+        <div className="mt-10 flex justify-between gap-20">
+          <div>
+            <NavLink>
+              <img src={ProjectImages.DeathWisCoffeehWebsite} alt="" className="w-[60%]" />
+            </NavLink>
+          </div>
+          <div className="text-left">
+            <div>
+              <h1 className="text-3xl font-bold mb-3" style={{color: themeChange ? "black" : "white"}} >Death Wish Coffee Website</h1>
+              <p className="text-[17px] mb-3" style={{color: themeChange ? "black" : "white"}}>This project is clone of Death wish coffee website which is a coffee brand based in the United States. Their coffee is primarily sold online, but can also be found in grocery stores across the United States.</p>
+              <h4 className="tracking-widest text-[17px]" style={{color: colorHandle}}>HTML 5, CSS 3, Javascript, Bootstrap, JSON-Server</h4>
             </div>
           </div>
-        </motion.section>
+        </div>
+        <div className="flex justify-between gap-20">
+        <div className="text-left">
+            <div>
+              <h1 className="text-3xl font-bold mb-3" style={{color: themeChange ? "black" : "white"}} >Death Wish Coffee Website</h1>
+              <p className="text-[17px] mb-3" style={{color: themeChange ? "black" : "white"}}>This project is clone of Death wish coffee website which is a coffee brand based in the United States. Their coffee is primarily sold online, but can also be found in grocery stores across the United States.</p>
+              <h4 className="tracking-widest text-[17px]" style={{color: colorHandle}}>HTML 5, CSS 3, Javascript, Bootstrap, JSON-Server</h4>
+            </div>
+          </div>
+          <div>
+            <NavLink>
+              <img src={ProjectImages.DeathWisCoffeehWebsite} alt="" className="w-[60%]" />
+            </NavLink>
+          </div>
+        </div>
       </div>
     </section>
   );
 }
+
+const ProjectHeading = styled.div`
+&::after{
+  background-color: ${({colorhandle})=>colorhandle};
+  content: '';
+  height: 3px;
+  width: 100%;
+  display: block;
+  position: absolute;
+  bottom: 0%;
+  margin: auto;
+  opacity: 0.7;
+}
+`

@@ -16,7 +16,7 @@ export const ColorChangeContextProvider = ({children}) => {
     const colors = [
         "#ff014f",
         "#c4096a",
-        "#64ce23",
+        "#00CF5D",
         "#ec1839",
         "#bc06b6",
         "#d4d119",
