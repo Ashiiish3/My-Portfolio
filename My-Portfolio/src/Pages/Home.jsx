@@ -62,7 +62,7 @@ export default function Home() {
             <button className={`BannerIcon ${themeChange ? "shadow-boxShadowLightMode bg-gradient-to-tl from-[#ffffff] to-[#e2e8ec]": "shadow-boxShadowDarkMode bg-black text-white"} mt-5 px-6 py-2 font-bold rounded-lg text-lg pointer-events-auto` }>About me</button>
           </div>
         </div>
-          <div className="fixed top-28 right-8 pointer-events-auto -translate-y-none">
+          <div className="fixed top-28 right-8 pointer-events-auto -translate-y-none z-10">
             <div className={`cursor-pointer p-3 rounded-full mb-4 text-xl transform ${showColorPicker ? "translate-x-0" : "-translate-x-[270px]"} transition-transform duration-300 ${themeChange ? "shadow-boxShadowLightMode bg-gradient-to-tl from-[#ffffff] to-[#e2e8ec]": "shadow-boxShadowDarkMode bg-black text-white"}`} onClick={()=>setShowColorPicker(!showColorPicker)}>
               <IoSettingsOutline className="animate-spinSetting" />
             </div>
