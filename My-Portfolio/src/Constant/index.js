@@ -13,6 +13,7 @@ import DeathWisCoffeehWebsite from '../Assets/Images/Death-wish-coffee-website-i
 import FlipkartWebsite from '../Assets/Images/Flipkart-image.jpg'
 import PetdogWebsite from '../Assets/Images/Petdog-website-image.jpg'
 import HighTechWebsite from '../Assets/Images/HigtTech-image.jpg'
+import Calculator from '../Assets/Images/Calculator.jpg'
 
 export const skillsImagesData = [
     {
@@ -76,7 +77,8 @@ export const ProjectImages = {
     DeathWisCoffeehWebsite,
     FlipkartWebsite,
     PetdogWebsite,
-    HighTechWebsite
+    HighTechWebsite,
+    Calculator
 }
 
 export const projectData = [
