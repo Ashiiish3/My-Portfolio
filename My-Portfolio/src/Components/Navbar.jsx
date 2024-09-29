@@ -23,7 +23,7 @@ export default function Navbar() {
               <NavItem colorhandle={colorHandle} className="cursor-pointer"><Link activeStyle={{color:colorHandle}} to="Projects" spy={true} smooth={true} offset={0} duration={500} >Projects</Link></NavItem>
               <NavItem colorhandle={colorHandle} className="cursor-pointer"><Link activeStyle={{color:colorHandle}} to="GithubStatus" spy={true} smooth={true} offset={0} duration={500} >Github Status</Link></NavItem>
               <NavItem colorhandle={colorHandle} className="cursor-pointer"><Link activeStyle={{color:colorHandle}} to="Contact" spy={true} smooth={true} offset={0} duration={500} >Contacts</Link></NavItem>
-              <NavItem colorhandle={colorHandle} className="cursor-pointer"><Link activeStyle={{color:colorHandle}} to="test1" spy={true} smooth={true} offset={0} duration={500} >Resume</Link></NavItem>
+              <NavItem colorhandle={colorHandle} className="cursor-pointer"><Link activeStyle={{color:colorHandle}} spy={true} smooth={true} offset={0} duration={500} >Resume</Link></NavItem>
           </ul>
         </div>
       </div>

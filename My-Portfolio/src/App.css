@@ -11,11 +11,7 @@ body {
     overflow-x: hidden;
     font-family: 'Lato', sans-serif;
 }
-/* for colorPicker component */
-/* .colorPicker{
-  background-color: yellow;
-  left: 80px;
-} */
-/* .active {
-  color: red;
- } */
+  /* for Contact Page */
+  .contact-box{
+    box-shadow: 0px 0px 10px 1px rgba(160, 160, 160, 0.486);
+  }

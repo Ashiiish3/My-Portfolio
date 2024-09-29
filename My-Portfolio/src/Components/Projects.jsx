@@ -7,7 +7,6 @@ import { TbExternalLink } from "react-icons/tb";
 import { FaGithub } from "react-icons/fa6";
 import { Swiper, SwiperSlide } from "swiper/react";
 import WorkSliderBtns from "./WorkSliderBtns";
-import "swiper/css";
 import { ThemeContext } from "../ContextAPI/ContextAPI";
 import { ColorChangeContext } from "../ContextAPI/ContextAPI";
 import styled from "styled-components";
@@ -31,6 +30,38 @@ export default function Projects() {
           My Projects
         </ProjectHeading>
         <div className="mt-10 mb-16 flex justify-between gap-20 relative">
+          <div className="h-[2px] absolute left-1/4 right-1/2 top-1/2 -translate-y-1/2" style={{backgroundColor: colorHandle}}></div>
+          <div className="h-4 w-4 rounded-full absolute z-10 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 border-[2px]" style={{backgroundColor: `${themeChange ? "#ecf0f3" : "#111111"}`, borderColor: colorHandle}}></div>
+          <div className="w-full relative">
+            <div>
+              <img src={ProjectImages.Calculator} alt="" className="w-[60%]" />
+            </div>
+          </div>
+          <div className="w-full text-left">
+            <div>
+              <h1 className="text-3xl font-bold mb-3" style={{color: themeChange ? "black" : "white"}} >Boat Website Clone</h1>
+              <p className="text-[17px] mb-3" style={{color: themeChange ? "black" : "white"}}>The Boat website clone is a fully responsive and modern e-commerce platform designed to mimic the look and functionality of the official Boat website. It showcases various electronic products such as headphones, speakers, wearables, and other accessories. The clone features an interactive product grid, advanced filtering options, detailed product pages with reviews, and a dynamic cart system.</p>
+              <h4 className="tracking-widest text-[17px]" style={{color: colorHandle}}>React JS, Tailwind CSS, HTML 5, CSS 3, Javascript, JSON-Server, Firebase, Firebase Auth, Paypal</h4>
+            </div>
+          </div>
+        </div>
+        <div className="mb-16 flex justify-between gap-20 relative">
+          <div className="w-full text-left">
+            <div>
+              <h1 className="text-3xl font-bold mb-3" style={{color: themeChange ? "black" : "white"}}>Infinite Scroll Project</h1>
+              <p className="text-[17px] mb-3" style={{color: themeChange ? "black" : "white"}}>This project demonstrates an efficient infinite scrolling interface using React and Tailwind CSS. It allows users to seamlessly browse through a list of items—such as images, without the need for pagination. As users scroll down, new items are automatically fetched and displayed, enhancing the overall user experience.</p>
+              <h4 className="tracking-widest text-[17px]" style={{color: colorHandle}}>React JS, Tailwind CSS, HTML 5, CSS 3, Javascript, JSON-Server</h4>
+            </div>
+          </div>
+          <div className="h-[2px] absolute left-1/2 right-1/4 top-1/2 -translate-y-1/2" style={{backgroundColor: colorHandle}}></div>
+          <div className="h-4 w-4 rounded-full absolute z-10 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 border-[2px]" style={{backgroundColor: `${themeChange ? "#ecf0f3" : "#111111"}`, borderColor: colorHandle}}></div>
+          <div className="w-full text-right relative">
+            <div>
+              <img src={ProjectImages.FlipkartWebsite} alt="" className="w-[60%] inline-block" />
+            </div>
+          </div>
+        </div>
+        <div className="mb-16 flex justify-between gap-20 relative">
           <div className="h-[2px] absolute left-1/4 right-1/2 top-1/2 -translate-y-1/2 opacity-70" style={{backgroundColor: colorHandle}}></div>
           <div className="h-4 w-4 rounded-full absolute z-10 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 border-[2px]" style={{backgroundColor: `${themeChange ? "#ecf0f3" : "#111111"}`, borderColor: colorHandle}}></div>
           <div className="w-full relative">
@@ -81,41 +112,9 @@ export default function Projects() {
         <div className="mb-16 flex justify-between gap-20 relative">
           <div className="w-full text-left">
             <div>
-              <h1 className="text-3xl font-bold mb-3" style={{color: themeChange ? "black" : "white"}}>Flipkart Clone</h1>
-              <p className="text-[17px] mb-3" style={{color: themeChange ? "black" : "white"}}>This project is an e-commerce website inspired by Flipkart, built using modern web technologies such JavaScript, Bootstrap and JSON-Server. The platform features a responsive and user-friendly interface where Users can create accounts and securely log into Flipkart Website.</p>
-              <h4 className="tracking-widest text-[17px]" style={{color: colorHandle}}>HTML 5, CSS 3, Javascript, JSON-Server, Bootstrap</h4>
-            </div>
-          </div>
-          <div className="h-[2px] absolute left-1/2 right-1/4 top-1/2 -translate-y-1/2" style={{backgroundColor: colorHandle}}></div>
-          <div className="h-4 w-4 rounded-full absolute z-10 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 border-[2px]" style={{backgroundColor: `${themeChange ? "#ecf0f3" : "#111111"}`, borderColor: colorHandle}}></div>
-          <div className="w-full text-right relative">
-            <div>
-              <img src={ProjectImages.FlipkartWebsite} alt="" className="w-[60%] inline-block" />
-            </div>
-          </div>
-        </div>
-        <div className="mb-16 flex justify-between gap-20 relative">
-          <div className="h-[2px] absolute left-1/4 right-1/2 top-1/2 -translate-y-1/2" style={{backgroundColor: colorHandle}}></div>
-          <div className="h-4 w-4 rounded-full absolute z-10 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 border-[2px]" style={{backgroundColor: `${themeChange ? "#ecf0f3" : "#111111"}`, borderColor: colorHandle}}></div>
-          <div className="w-full relative">
-            <div>
-              <img src={ProjectImages.Calculator} alt="" className="w-[60%]" />
-            </div>
-          </div>
-          <div className="w-full text-left">
-            <div>
-              <h1 className="text-3xl font-bold mb-3" style={{color: themeChange ? "black" : "white"}} >Calculator</h1>
-              <p className="text-[17px] mb-3" style={{color: themeChange ? "black" : "white"}}>This project is a simple and responsive calculator built using HTML, CSS, and JavaScript. The calculator allows users to perform basic arithmetic operations such as addition, subtraction, multiplication, and division.</p>
-              <h4 className="tracking-widest text-[17px]" style={{color: colorHandle}}>HTML 5, CSS 3, Javascript</h4>
-            </div>
-          </div>
-        </div>
-        <div className="mb-16 flex justify-between gap-20 relative">
-          <div className="w-full text-left">
-            <div>
-              <h1 className="text-3xl font-bold mb-3" style={{color: themeChange ? "black" : "white"}}>Flipkart Clone</h1>
-              <p className="text-[17px] mb-3" style={{color: themeChange ? "black" : "white"}}>This project is an e-commerce website inspired by Flipkart, built using modern web technologies such JavaScript, Bootstrap and JSON-Server. The platform features a responsive and user-friendly interface where Users can create accounts and securely log into Flipkart Website.</p>
-              <h4 className="tracking-widest text-[17px]" style={{color: colorHandle}}>HTML 5, CSS 3, Javascript, JSON-Server, Bootstrap</h4>
+              <h1 className="text-3xl font-bold mb-3" style={{color: themeChange ? "black" : "white"}}>To do List Project</h1>
+              <p className="text-[17px] mb-3" style={{color: themeChange ? "black" : "white"}}>This is a responsive and user-friendly to-do list application designed to help users manage tasks efficiently. Users can add, edit, and delete tasks while marking them as completed once done. The application is built with a focus on simplicity and ease of use, featuring an intuitive interface that provides real-time feedback on task completion.</p>
+              <h4 className="tracking-widest text-[17px]" style={{color: colorHandle}}>React js, Tailwind CSS, HTML 5, CSS 3, Javascript, JSON-Server</h4>
             </div>
           </div>
           <div className="h-[2px] absolute left-1/2 right-1/4 top-1/2 -translate-y-1/2" style={{backgroundColor: colorHandle}}></div>
