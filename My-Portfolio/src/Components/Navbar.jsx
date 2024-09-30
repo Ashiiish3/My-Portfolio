@@ -16,7 +16,7 @@ export default function Navbar() {
           </div>
           <h2 className={`ms-3 text-xl font-medium ${themeChange ? "text-black" : "text-textDarkMode"}`}>Ashish</h2>
         </div>
-        <div className='flex justify-between items-center gap-12'>
+        <div className='justify-between items-center gap-12 hidden md:flex'>
           <ul className={`flex justify-between gap-14 uppercase ${themeChange ? "text-black": "text-white"} font-semibold`}>
               <NavItem colorhandle={colorHandle} className="cursor-pointer"><Link activeStyle={{color:colorHandle}} to="Home" spy={true} smooth={true} offset={0} duration={500} >Home</Link></NavItem>
               <NavItem colorhandle={colorHandle} className="cursor-pointer"><Link activeStyle={{color:colorHandle}} to="Skills" spy={true} smooth={true} offset={0} duration={500} >Skills</Link></NavItem>

@@ -1,15 +1,14 @@
-import React, { useContext, useRef, useState } from 'react'
-import { ColorChangeContext, ThemeContext } from '../ContextAPI/ContextAPI';
-import styled from "styled-components";
+import React, { useContext, useState } from 'react'
+import { ThemeContext } from '../ContextAPI/ContextAPI';
 import { LuLinkedin } from 'react-icons/lu';
 import { FaXTwitter } from 'react-icons/fa6';
 import { FiGithub } from 'react-icons/fi';
 import { MdOutlinePhone } from "react-icons/md";
 import emailjs from '@emailjs/browser';
+import { NavLink } from "react-router-dom";
 
 export default function Contacts() {
   const { themeChange } = useContext(ThemeContext);
-  const { colorHandle } = useContext(ColorChangeContext);
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [message, setMessage] = useState("")
@@ -40,46 +39,55 @@ export default function Contacts() {
   };
   return (
     <section id="Contact" className={`${themeChange ? "bg-[#ecf0f3]" : "bg-[#111111]"}`}>
-      <div className='max-w-[68%] m-auto'>
-        <ContactHeading colorhandle={colorHandle} className='pb-5 relative inline-block mt-1 text-5xl font-Montserratt font-[600]' style={{ color: themeChange ? "black" : "white" }}>
+      <div className='w-[90%] md:max-w-[68%] m-auto pb-28 pt-1'>
+        <p className='mt-1  text-3xl md:text-4xl lg:text-5xl font-Montserratt font-[600]' style={{ color: themeChange ? "black" : "white" }}>
           Contact Me
-        </ContactHeading>
+        </p>
         <div className="flex flex-col lg:flex-row justify-center items-center mt-10">
           {/* Left Section - Contact Info */}
-          <div className="grid grid-cols-2 gap-6 w-full lg:w-1/2 relative left-16">
-            {/* Office Location */}
-            <div className={`p-6 rounded-lg shadow-lg ${themeChange ? "bg-white" : "bg-gray-800"}`} style={{ color: themeChange ? "black" : "white" }}>
-              <div className="text-center text-4xl">
-                <LuLinkedin className='m-auto' />
-                <h3 className="text-lg font-medium">LinkedIn</h3>
+          <div className="grid grid-cols-2 gap-6 w-full lg:w-1/2 relative md:left-16">
+            {/* Linkedin */}
+            <div className={`p-4 md:p-6 rounded-lg shadow-lg ${themeChange ? "bg-white" : "bg-gray-800"}`} style={{ color: themeChange ? "black" : "white" }}>
+              <div className="text-center">
+              <NavLink to={"https://www.linkedin.com/in/ashish-sharma-b0a6632b0"} target="_blank">
+                <LuLinkedin className='m-auto text-4xl mb-1' />
+                <h3 className="text-sm md:text-lg font-medium">LinkedIn</h3>
+                <p className='text-[13px] md:text-[16px]'>AshishSharma</p>
+                </NavLink>
               </div>
             </div>
             {/* Phone Number */}
-            <div className={`p-6 rounded-lg shadow-lg ${themeChange ? "bg-white" : "bg-gray-800"}`} style={{ color: themeChange ? "black" : "white" }}>
+            <div className={`p-4 md:p-6 rounded-lg shadow-lg ${themeChange ? "bg-white" : "bg-gray-800"}`} style={{ color: themeChange ? "black" : "white" }}>
               <div className="text-center">
-                <MdOutlinePhone className="m-auto text-4xl" />
-                <h3 className="text-lg font-medium">Phone Number</h3>
-                <p>+91 7891541151</p>
+                  <MdOutlinePhone className="m-auto text-4xl mb-1" />
+                <h3 className="text-sm md:text-lg font-medium">Phone Number</h3>
+                <p className='text-[13px] md:text-[16px]'>+91 7891541151</p>
               </div>
             </div>
-            {/* Fax */}
-            <div className={`p-6 rounded-lg shadow-lg ${themeChange ? "bg-white" : "bg-gray-800"}`} style={{ color: themeChange ? "black" : "white" }}>
+            {/* Twitter */}
+            <div className={`p-4 md:p-6 rounded-lg shadow-lg ${themeChange ? "bg-white" : "bg-gray-800"}`} style={{ color: themeChange ? "black" : "white" }}>
               <div className="text-center">
-                <FaXTwitter className='m-auto text-4xl' />
-                <h3 className="text-lg font-medium">Twitter</h3>
+                <NavLink to={"https://x.com/ImAsharma3"} target="_blank">
+                  <FaXTwitter className='m-auto text-4xl mb-1' />
+                <h3 className="text-sm md:text-lg font-medium">Twitter</h3>
+                <p className='text-[13px] md:text-[16px]'>@ImAsharma3</p>
+                </NavLink>
               </div>
             </div>
-            {/* Email */}
-            <div className={`p-6 rounded-lg shadow-lg ${themeChange ? "bg-white" : "bg-gray-800"}`} style={{ color: themeChange ? "black" : "white" }}>
+            {/* Github */}
+            <div className={`p-4 md:p-6 rounded-lg shadow-lg ${themeChange ? "bg-white" : "bg-gray-800"}`} style={{ color: themeChange ? "black" : "white" }}>
               <div className="text-center">
-                <FiGithub className='m-auto text-4xl' />
-                <h3 className="text-lg font-medium">Github</h3>
+                <NavLink to={"https://github.com/Ashiiish3"} target="_blank">
+                    <FiGithub className='m-auto text-4xl mb-1' />
+                <h3 className="text-sm md:text-lg font-medium">Github</h3>
+                <p className='text-[13px] md:text-[16px]'>Ashiiish3</p>
+                </NavLink>
               </div>
             </div>
           </div>
           {/* Right Section - Form */}
           <div className="contact-box w-full lg:w-full p-8 rounded-lg mt-8 lg:mt-0">
-            <form className="mt-8 space-y-4 w-[80%] m-auto" onSubmit={sendEmail}>
+            <form className="md:mt-8 space-y-4 md:w-[80%] m-auto" onSubmit={sendEmail}>
               <input
                 type="text"
                 placeholder="Enter your Name"
@@ -107,7 +115,7 @@ export default function Contacts() {
               <input
                 type="submit"
                 value={"Send"}
-                className="bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition"
+                className="button bg-blue-500 cursor-pointer text-white px-6 py-2 rounded-md hover:bg-blue-700 transition"
               />
             </form>
           </div>
@@ -116,16 +124,3 @@ export default function Contacts() {
     </section>
   )
 }
-const ContactHeading = styled.div`
-&::after{
-  background-color: ${({ colorhandle }) => colorhandle};
-  content: '';
-  height: 3px;
-  width: 100%;
-  display: block;
-  position: absolute;
-  bottom: 0%;
-  margin: auto;
-  opacity: 0.7;
-}
-`

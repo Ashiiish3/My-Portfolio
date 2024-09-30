@@ -17,7 +17,7 @@ code {
 }
 @layer components {
   .BannerIcon{
-    @apply p-5 rounded-md text-xl bg-[#ecf0f3] cursor-pointer hover:text-white hover:bg-linearGradients duration-[300ms]
+    @apply p-4 m-auto md:m-0 md:p-5 rounded-md text-xl bg-[#ecf0f3] cursor-pointer hover:text-white hover:bg-linearGradients duration-[300ms]
   }
 }
 /* for Skills Components */
@@ -28,8 +28,6 @@ code {
   scale: 1.25;
 }
 .skill-images{
-  height: 80px;
-  width: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
