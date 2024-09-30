@@ -16,17 +16,11 @@ body {
   box-shadow: 0px 0px 10px 1px rgba(160, 160, 160, 0.486);
 }
 /* CSS */
-.button {
-  background-image: linear-gradient(to left, #0dcdead3, #3b8cf086);
-  border: 0;
-  border-radius: 4px;
+.button:hover {
+  background-image: linear-gradient(to left, #0dcdead7, #1970dbdc);
   box-shadow: rgba(0, 0, 0, 0.3) 0 5px 15px;
-  box-sizing: border-box;
   color: #fff;
   cursor: pointer;
-  font-family: Montserrat, sans-serif;
-  font-size: 0.9em;
-  margin: 5px;
   text-align: center;
   user-select: none;
   -webkit-user-select: none;

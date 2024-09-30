@@ -115,7 +115,7 @@ export default function Contacts() {
               <input
                 type="submit"
                 value={"Send"}
-                className="button bg-blue-500 cursor-pointer text-white px-6 py-2 rounded-md hover:bg-blue-700 transition"
+                className={`BannerIcon button ${themeChange ? "text-black shadow-boxShadowLightMode bg-gradient-to-tl from-[#ffffff] to-[#e2e8ec]" : "shadow-boxShadowDarkMode bg-black text-white"} cursor-pointer px-6 py-2 rounded-md transition`}
               />
             </form>
           </div>
