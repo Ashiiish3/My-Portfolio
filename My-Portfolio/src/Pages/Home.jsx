@@ -39,8 +39,8 @@ export default function Home() {
       <div className="hidden md:block">
         <MatterCanvas />
       </div>
-      <section className="flex justify-between items-center w-full relative top-24 pointer-events-none h-screen">
-        <div className="flex flex-col w-16 ms-2 gap-4 mt-5 pointer-events-auto  -translate-y-24">
+      <section className="flex flex-col md:flex-row justify-evenly items-center w-full relative top-24 pointer-events-none h-[90vh] md:h-screen">
+        <div className="flex flex-row md:flex-col md:w-16 ms-2 gap-4 mt-5 mb-24 md:mb-0 pointer-events-auto md:-translate-y-24 md:order-first order-last">
           <NavLink to={"https://www.linkedin.com/in/ashish-sharma-b0a6632b0"} target="_blank" className={`BannerIcon button ${themeChange ? "shadow-boxShadowLightMode bg-gradient-to-tl from-[#ffffff] to-[#e2e8ec]" : "shadow-boxShadowDarkMode bg-black text-white"}`}>
             <span>
               <LuLinkedin />
@@ -62,7 +62,7 @@ export default function Home() {
             </span>
           </NavLink>
         </div>
-        <div className="w-[71%] m-auto flex items-center -translate-y-24">
+        <div className="w-[85%] md:w-[71%] mt-52 md:m-auto flex items-center -translate-y-24">
           <div className="text-start">
             <p className="uppercase tracking-widest text-[12px] md:text-[16px]" style={{ color: themeChange ? "black" : "white" }}>
               Welcome to my Website
@@ -76,13 +76,13 @@ export default function Home() {
             <button className={`BannerIcon button ${themeChange ? "shadow-boxShadowLightMode bg-gradient-to-tl from-[#ffffff] to-[#e2e8ec]" : "shadow-boxShadowDarkMode bg-black text-white"} mt-5 px-6 py-2 font-semibold rounded-lg text-[17px] md:text-lg pointer-events-auto`} onClick={HandleClick} >About me</button>
           </div>
         </div>
-        <div className="fixed top-28 right-8 pointer-events-auto -translate-y-none z-10">
-          <div className={`cursor-pointer p-3 rounded-full mb-4 text-xl transform ${showColorPicker ? "translate-x-0" : "-translate-x-[270px]"} transition-transform duration-300 ${themeChange ? "shadow-boxShadowLightMode bg-gradient-to-tl from-[#ffffff] to-[#e2e8ec]" : "shadow-boxShadowDarkMode bg-black text-white"}`} onClick={() => setShowColorPicker(!showColorPicker)}>
+        <div className="fixed top-28 right-4 md:right-8 pointer-events-auto -translate-y-none z-10">
+          <div className={`cursor-pointer p-3 rounded-full mb-4 text-xl transform ${showColorPicker ? "translate-x-0" : "-translate-x-60 md:-translate-x-[270px]"} transition-transform duration-300 ${themeChange ? "shadow-boxShadowLightMode bg-gradient-to-tl from-[#ffffff] to-[#e2e8ec]" : "shadow-boxShadowDarkMode bg-black text-white"}`} onClick={() => setShowColorPicker(!showColorPicker)}>
             <IoSettingsOutline className="animate-spinSetting" />
           </div>
           <ColorPicker />
           <div>
-            <div className={`cursor-pointer p-3 rounded-full text-xl transform ${showColorPicker ? "translate-x-0" : "-translate-x-[270px]"} transition-transform duration-300 ${themeChange ? "shadow-boxShadowLightMode bg-gradient-to-tl from-[#ffffff] to-[#e2e8ec]" : "shadow-boxShadowDarkMode bg-black"}`} onClick={() => setThemeChange(!themeChange)}>
+            <div className={`cursor-pointer p-3 rounded-full text-xl transform ${showColorPicker ? "translate-x-0" : "-translate-x-60 md:-translate-x-[270px]"} transition-transform duration-300 ${themeChange ? "shadow-boxShadowLightMode bg-gradient-to-tl from-[#ffffff] to-[#e2e8ec]" : "shadow-boxShadowDarkMode bg-black"}`} onClick={() => setThemeChange(!themeChange)}>
               {themeChange ? <IoMoonOutline className='text-black' /> : <RxSun className='text-white' />}
             </div>
           </div>
