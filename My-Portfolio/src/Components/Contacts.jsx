@@ -39,14 +39,12 @@ export default function Contacts() {
   };
   return (
     <section id="Contact" className={`${themeChange ? "bg-[#ecf0f3]" : "bg-[#111111]"}`}>
-      <div className='w-[90%] md:max-w-[68%] m-auto pb-28 pt-1'>
+      <div className='w-[90%] md:max-w-[68%] m-auto md:py-28 pt-1'>
         <p className='mt-1  text-3xl md:text-4xl lg:text-5xl font-Montserratt font-[600]' style={{ color: themeChange ? "black" : "white" }}>
           Contact Me
         </p>
         <div className="flex flex-col lg:flex-row justify-center items-center mt-10">
-          {/* Left Section - Contact Info */}
           <div className="grid grid-cols-2 gap-6 w-full lg:w-1/2 relative md:left-16">
-            {/* Linkedin */}
             <div className={`p-4 md:p-6 rounded-lg shadow-lg ${themeChange ? "bg-white" : "bg-gray-800"}`} style={{ color: themeChange ? "black" : "white" }}>
               <div className="text-center">
               <NavLink to={"https://www.linkedin.com/in/ashish-sharma-b0a6632b0"} target="_blank">
@@ -56,7 +54,6 @@ export default function Contacts() {
                 </NavLink>
               </div>
             </div>
-            {/* Phone Number */}
             <div className={`p-4 md:p-6 rounded-lg shadow-lg ${themeChange ? "bg-white" : "bg-gray-800"}`} style={{ color: themeChange ? "black" : "white" }}>
               <div className="text-center">
                   <MdOutlinePhone className="m-auto text-4xl mb-1" />
@@ -64,7 +61,6 @@ export default function Contacts() {
                 <p className='text-[13px] md:text-[16px]'>+91 7891541151</p>
               </div>
             </div>
-            {/* Twitter */}
             <div className={`p-4 md:p-6 rounded-lg shadow-lg ${themeChange ? "bg-white" : "bg-gray-800"}`} style={{ color: themeChange ? "black" : "white" }}>
               <div className="text-center">
                 <NavLink to={"https://x.com/ImAsharma3"} target="_blank">
@@ -74,7 +70,6 @@ export default function Contacts() {
                 </NavLink>
               </div>
             </div>
-            {/* Github */}
             <div className={`p-4 md:p-6 rounded-lg shadow-lg ${themeChange ? "bg-white" : "bg-gray-800"}`} style={{ color: themeChange ? "black" : "white" }}>
               <div className="text-center">
                 <NavLink to={"https://github.com/Ashiiish3"} target="_blank">
@@ -85,7 +80,6 @@ export default function Contacts() {
               </div>
             </div>
           </div>
-          {/* Right Section - Form */}
           <div className="contact-box w-full lg:w-full p-8 rounded-lg mt-8 lg:mt-0">
             <form className="md:mt-8 space-y-4 md:w-[80%] m-auto" onSubmit={sendEmail}>
               <input
@@ -95,6 +89,7 @@ export default function Contacts() {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 className={`w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 ${themeChange ? "bg-white" : "bg-gray-800 border-gray-600"}`}
+                required
               />
               <input
                 type="email"
@@ -103,6 +98,7 @@ export default function Contacts() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className={`w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 ${themeChange ? "bg-white" : "bg-gray-800 border-gray-600"}`}
+                required
               />
               <textarea
                 placeholder="Your message here"
@@ -111,6 +107,7 @@ export default function Contacts() {
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 className={`w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 ${themeChange ? "bg-white" : "bg-gray-800 border-gray-600"}`}
+                required
               ></textarea>
               <input
                 type="submit"

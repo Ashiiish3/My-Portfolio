@@ -5,6 +5,7 @@ import Navbar from './Components/Navbar';
 import Projects from './Components/Projects';
 import Skills from './Components/Skills';
 import GithubStatus from './Components/GithubStatus';
+import Footer from './Pages/Footer';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Projects />
       <GithubStatus />
       <Contacts />
+      <Footer />
     </div>
   );
 }

@@ -34,9 +34,6 @@ code {
   margin: auto;
   transition: 0.5s all;
 }
-.number{
-  -webkit-text-stroke: 0.1rem #ff014f;
-}
 /* for Projects Components */
 .project-heading::after{
   content: '';

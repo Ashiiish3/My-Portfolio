@@ -13,7 +13,7 @@ import ColorPicker from "../Components/ColorPicker";
 import About from "../Components/About";
 
 export default function Home() {
-  const [showAbout, setShowAbout] = useState(true)
+  const [showAbout, setShowAbout] = useState(false)
   const { themeChange, setThemeChange } = useContext(ThemeContext)
   const { colorHandle, showColorPicker, setShowColorPicker } = useContext(ColorChangeContext);
   const WriteName = {
@@ -23,9 +23,18 @@ export default function Home() {
     deleteSpeed: 20,
   }
   const [text] = useTypewriter(WriteName)
-
+  const HandleClick = () =>{
+    setShowAbout(!showAbout)
+    if(showAbout){
+      document.body.style.overflowY = "scroll";
+    }
+    else{
+      document.body.style.overflowY = "hidden";
+    }
+  }
   return (
     <>
+    {showAbout && <div className="fixed top-0 bottom-0 left-0 right-0 z-20 h-full w-full bg-black opacity-50" onClick={HandleClick}></div>}
     <div id="Home" className={`${themeChange ? "bg-[#ecf0f3]" : "bg-[#111111]"}`}>
       <div className="hidden md:block">
         <MatterCanvas />
@@ -64,7 +73,7 @@ export default function Home() {
               <span style={{ color: colorHandle }}>{text}</span>
               <Cursor cursorColor={`${colorHandle}`} cursorBlinking="false" />
             </h1>
-            <button className={`BannerIcon button ${themeChange ? "shadow-boxShadowLightMode bg-gradient-to-tl from-[#ffffff] to-[#e2e8ec]" : "shadow-boxShadowDarkMode bg-black text-white"} mt-5 px-6 py-2 font-semibold rounded-lg text-[17px] md:text-lg pointer-events-auto`}>About me</button>
+            <button className={`BannerIcon button ${themeChange ? "shadow-boxShadowLightMode bg-gradient-to-tl from-[#ffffff] to-[#e2e8ec]" : "shadow-boxShadowDarkMode bg-black text-white"} mt-5 px-6 py-2 font-semibold rounded-lg text-[17px] md:text-lg pointer-events-auto`} onClick={HandleClick} >About me</button>
           </div>
         </div>
         <div className="fixed top-28 right-8 pointer-events-auto -translate-y-none z-10">
@@ -80,7 +89,7 @@ export default function Home() {
         </div>
       </section>
     </div>
-    {showAbout && <About />}
+    {showAbout && <About HandleClick={HandleClick} />}
     </>
   );
 }
