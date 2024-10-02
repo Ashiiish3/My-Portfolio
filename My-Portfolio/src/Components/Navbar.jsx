@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import logo from '../Assets/Images/Logo.png'
+import logo from '../Assets/Images/A_logo.png'
 import { Link } from 'react-scroll'
 import { ColorChangeContext, ThemeContext } from '../ContextAPI/ContextAPI';
 import styled from 'styled-components';
@@ -8,13 +8,12 @@ export default function Navbar() {
   const {themeChange} = useContext(ThemeContext);
   const { colorHandle } = useContext(ColorChangeContext);
   return (
-    <div className={`fixed w-full backdrop-blur-md flex top-0 z-10 px-12 h-24 border-opacity-100 ${themeChange ? "border-b-gray-300" : "border-b-gray-500"} border-b-[1px]`} >
-      <div className='max-w-[72%] w-full flex justify-between items-center m-auto'>
+    <div className={`md:fixed w-full backdrop-blur-md flex top-0 z-20 md:px-12 h-24 border-opacity-100 ${themeChange ? "bg-[#ecf0f3] border-b-gray-300" : "bg-[#111111] border-b-gray-500"} md:border-b-[1px]`} >
+      <div className='max-w-[72%] w-full flex justify-between items-center ms-5 md:m-auto'>
         <div className=' flex justify-between items-center'>
-          <div className={`rounded-full border-[3px] ${themeChange ? "border-borderColor" : "border-[#494949]"}`}>
-            <img src={logo} alt={logo} height={65} width={65} className='rounded-full brightness-110' />
+          <div>
+            <img src={logo} alt={logo} height={65} width={65} />
           </div>
-          <h2 className={`ms-3 text-xl font-medium ${themeChange ? "text-black" : "text-textDarkMode"}`}>Ashish</h2>
         </div>
         <div className='justify-between items-center gap-12 hidden md:flex'>
           <ul className={`flex justify-between gap-14 uppercase ${themeChange ? "text-black": "text-white"} font-semibold`}>

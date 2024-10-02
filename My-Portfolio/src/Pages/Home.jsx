@@ -11,6 +11,7 @@ import { ColorChangeContext, ThemeContext } from "../ContextAPI/ContextAPI";
 import { IoSettingsOutline } from "react-icons/io5";
 import ColorPicker from "../Components/ColorPicker";
 import About from "../Components/About";
+import logo from '../Assets/Images/A_logo.png'
 
 export default function Home() {
   const [showAbout, setShowAbout] = useState(false)
@@ -62,7 +63,7 @@ export default function Home() {
             </span>
           </NavLink>
         </div>
-        <div className="w-[85%] md:w-[71%] mt-52 md:m-auto flex items-center -translate-y-24">
+        <div className="w-[85%] md:w-[71%] md:m-auto flex items-center -translate-y-24">
           <div className="text-start">
             <p className="uppercase tracking-widest text-[12px] md:text-[16px]" style={{ color: themeChange ? "black" : "white" }}>
               Welcome to my Website
@@ -74,10 +75,13 @@ export default function Home() {
               <Cursor cursorColor={`${colorHandle}`} cursorBlinking="false" />
             </h1>
             <button className={`BannerIcon button ${themeChange ? "shadow-boxShadowLightMode bg-gradient-to-tl from-[#ffffff] to-[#e2e8ec]" : "shadow-boxShadowDarkMode bg-black text-white"} mt-5 px-6 py-2 font-semibold rounded-lg text-[17px] md:text-lg pointer-events-auto`} onClick={HandleClick} >About me</button>
+            <div className="absolute -top-10 md:-top-24 left-16 md:left-auto md:right-64 -z-10 hidden md:block">
+              <img src={logo} alt="" className="w-[80%]" />
+            </div>
           </div>
         </div>
-        <div className="fixed top-28 right-4 md:right-8 pointer-events-auto -translate-y-none z-10">
-          <div className={`cursor-pointer p-3 rounded-full mb-4 text-xl transform ${showColorPicker ? "translate-x-0" : "-translate-x-60 md:-translate-x-[270px]"} transition-transform duration-300 ${themeChange ? "shadow-boxShadowLightMode bg-gradient-to-tl from-[#ffffff] to-[#e2e8ec]" : "shadow-boxShadowDarkMode bg-black text-white"}`} onClick={() => setShowColorPicker(!showColorPicker)}>
+        <div className="fixed top-4 md:top-28 right-4 md:right-8 pointer-events-auto -translate-y-none z-10">
+          <div className={`cursor-pointer p-3 rounded-full mb-3 md:mb-4 text-xl transform ${showColorPicker ? "translate-x-0" : "-translate-x-60 md:-translate-x-[270px]"} transition-transform duration-300 ${themeChange ? "shadow-boxShadowLightMode bg-gradient-to-tl from-[#ffffff] to-[#e2e8ec]" : "shadow-boxShadowDarkMode bg-black text-white"}`} onClick={() => setShowColorPicker(!showColorPicker)}>
             <IoSettingsOutline className="animate-spinSetting" />
           </div>
           <ColorPicker />

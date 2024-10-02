@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import logo from '../Assets/Images/Logo.png'
+import image from '../Assets/Images/Logo.png'
 import { ColorChangeContext, ThemeContext } from '../ContextAPI/ContextAPI';
 import { RxCross2 } from "react-icons/rx";
 
@@ -35,7 +35,7 @@ export default function About({HandleClick}) {
         </div>
         <div className="w-full md:w-[50%] flex justify-center order-first md:order-last">
           <div>
-            <img src={logo} alt={logo} className="brightness-110 w-[40%] md:w-full m-auto" />
+            <img src={image} alt={image} className="brightness-110 w-[40%] md:w-full m-auto" />
           </div>
         </div>
       </div>

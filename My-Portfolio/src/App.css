@@ -17,7 +17,7 @@ body {
 }
 /* CSS */
 .button:hover {
-  background-image: linear-gradient(to left, #0dcdead7, #1970dbdc);
+  background-image: linear-gradient(to left, #1cbdd6d7, #0f59b4dc);
   box-shadow: rgba(0, 0, 0, 0.3) 0 5px 15px;
   color: #fff;
   cursor: pointer;
