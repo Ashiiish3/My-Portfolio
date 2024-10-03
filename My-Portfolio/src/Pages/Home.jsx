@@ -78,7 +78,7 @@ export default function Home() {
             </h1>
             <div className="flex float-start">
               <button className={`BannerIcon button ${themeChange ? "shadow-boxShadowLightMode bg-gradient-to-tl from-[#ffffff] to-[#e2e8ec]" : "shadow-boxShadowDarkMode bg-black text-white"} mt-5 md:px-6 py-2 font-semibold rounded-lg text-[16px] md:text-lg pointer-events-auto`} onClick={HandleClick} >About me</button>
-              <button className={`BannerIcon flex items-center md:hidden ${themeChange ? "shadow-boxShadowLightMode bg-gradient-to-tl from-[#ffffff] to-[#e2e8ec]" : "shadow-boxShadowDarkMode bg-black text-white"} mt-5 md:px-6 py-2 font-semibold rounded-lg text-[16px] md:text-lg ms-6`} ><Resume /><HiDownload className='ms-1' /></button>
+              <button className={`BannerIcon flex items-center md:hidden ${themeChange ? "shadow-boxShadowLightMode bg-gradient-to-tl from-[#ffffff] to-[#e2e8ec]" : "shadow-boxShadowDarkMode bg-black text-white"} mt-5 md:px-6 py-2 font-semibold rounded-lg text-[16px] md:text-lg ms-6 pointer-events-auto`} ><Resume /><HiDownload className='ms-1' /></button>
             </div>
             <div className="absolute -top-10 md:-top-24 left-16 md:left-auto md:right-64 -z-10 hidden md:block">
               <img src={logo} alt="" className="w-[80%]" />

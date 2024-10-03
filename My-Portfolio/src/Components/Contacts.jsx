@@ -39,7 +39,7 @@ export default function Contacts() {
   };
   return (
     <section id="Contact" className={`${themeChange ? "bg-[#ecf0f3]" : "bg-[#111111]"}`}>
-      <div className='w-[90%] md:max-w-[68%] m-auto md:py-28 pt-1'>
+      <div className='w-[90%] md:max-w-[68%] m-auto md:pt-28 md:pb-40 pt-1'>
         <p className='mt-1  text-3xl md:text-4xl lg:text-5xl font-Montserratt font-[600]' style={{ color: themeChange ? "black" : "white" }}>
           Contact Me
         </p>
