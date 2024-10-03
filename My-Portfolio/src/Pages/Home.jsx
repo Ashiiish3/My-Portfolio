@@ -12,6 +12,8 @@ import { IoSettingsOutline } from "react-icons/io5";
 import ColorPicker from "../Components/ColorPicker";
 import About from "../Components/About";
 import logo from '../Assets/Images/A_logo.png'
+import { HiDownload } from "react-icons/hi";
+import Resume from "../Components/Resume";
 
 export default function Home() {
   const [showAbout, setShowAbout] = useState(false)
@@ -64,7 +66,7 @@ export default function Home() {
           </NavLink>
         </div>
         <div className="w-[85%] md:w-[71%] md:m-auto flex items-center -translate-y-24">
-          <div className="text-start">
+          <div className="text-start w-full">
             <p className="uppercase tracking-widest text-[12px] md:text-[16px]" style={{ color: themeChange ? "black" : "white" }}>
               Welcome to my Website
             </p>
@@ -74,7 +76,10 @@ export default function Home() {
               <span style={{ color: colorHandle }}>{text}</span>
               <Cursor cursorColor={`${colorHandle}`} cursorBlinking="false" />
             </h1>
-            <button className={`BannerIcon button ${themeChange ? "shadow-boxShadowLightMode bg-gradient-to-tl from-[#ffffff] to-[#e2e8ec]" : "shadow-boxShadowDarkMode bg-black text-white"} mt-5 px-6 py-2 font-semibold rounded-lg text-[17px] md:text-lg pointer-events-auto`} onClick={HandleClick} >About me</button>
+            <div className="flex float-start">
+              <button className={`BannerIcon button ${themeChange ? "shadow-boxShadowLightMode bg-gradient-to-tl from-[#ffffff] to-[#e2e8ec]" : "shadow-boxShadowDarkMode bg-black text-white"} mt-5 md:px-6 py-2 font-semibold rounded-lg text-[16px] md:text-lg pointer-events-auto`} onClick={HandleClick} >About me</button>
+              <button className={`BannerIcon flex items-center md:hidden ${themeChange ? "shadow-boxShadowLightMode bg-gradient-to-tl from-[#ffffff] to-[#e2e8ec]" : "shadow-boxShadowDarkMode bg-black text-white"} mt-5 md:px-6 py-2 font-semibold rounded-lg text-[16px] md:text-lg ms-6`} ><Resume /><HiDownload className='ms-1' /></button>
+            </div>
             <div className="absolute -top-10 md:-top-24 left-16 md:left-auto md:right-64 -z-10 hidden md:block">
               <img src={logo} alt="" className="w-[80%]" />
             </div>

@@ -10,7 +10,7 @@ export default function About({HandleClick}) {
   return (
     <section className={`w-[95%] md:w-[68%] flex absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 py-3 px-3 md:py-16 md:px-20 rounded-xl border-[1px] z-30 ${themeChange ? "bg-white border-gray-300" : "bg-[#191919] border-gray-500"}`}>
       <div className="flex flex-col md:flex-row justify-between m-auto md:gap-10">
-        <button class="absolute top-5 right-5 p-2 rounded-full" onClick={HandleClick} style={{ backgroundColor: themeChange ? "#eff4f7" : "black" , color: themeChange ? "black" : "white" }}>
+        <button className="absolute top-5 right-5 p-2 rounded-full" onClick={HandleClick} style={{ backgroundColor: themeChange ? "#eff4f7" : "black" , color: themeChange ? "black" : "white" }}>
           <RxCross2 />
         </button>
         <div className="w-full md:w-[50%] text-start">

@@ -3,6 +3,8 @@ import logo from '../Assets/Images/A_logo.png'
 import { Link } from 'react-scroll'
 import { ColorChangeContext, ThemeContext } from '../ContextAPI/ContextAPI';
 import styled from 'styled-components';
+import Resume from './Resume';
+import { HiDownload } from "react-icons/hi";
 
 export default function Navbar() {
   const {themeChange} = useContext(ThemeContext);
@@ -22,7 +24,7 @@ export default function Navbar() {
               <NavItem colorhandle={colorHandle} className="cursor-pointer"><Link activeStyle={{color:colorHandle}} to="Projects" spy={true} smooth={true} offset={0} duration={500} >Projects</Link></NavItem>
               <NavItem colorhandle={colorHandle} className="cursor-pointer"><Link activeStyle={{color:colorHandle}} to="GithubStatus" spy={true} smooth={true} offset={0} duration={500} >Github Status</Link></NavItem>
               <NavItem colorhandle={colorHandle} className="cursor-pointer"><Link activeStyle={{color:colorHandle}} to="Contact" spy={true} smooth={true} offset={0} duration={500} >Contacts</Link></NavItem>
-              <NavItem colorhandle={colorHandle} className="cursor-pointer"><Link activeStyle={{color:colorHandle}} to="" spy={true} smooth={true} offset={0} duration={500} >Resume</Link></NavItem>
+              <NavItem colorhandle={colorHandle} className="cursor-pointer"><span className='flex items-center' ><Resume /><HiDownload className='ms-1' /></span></NavItem>
           </ul>
         </div>
       </div>

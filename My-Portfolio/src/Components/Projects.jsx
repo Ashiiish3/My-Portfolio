@@ -17,7 +17,7 @@ export default function Projects() {
         <ProjectHeading colorhandle={colorHandle} className='pb-5 relative inline-block mt-1 text-3xl md:text-4xl lg:text-5xl font-Montserratt font-[600]' style={{ color: themeChange ? "black" : "white" }}>
           My Projects
         </ProjectHeading>
-        <div className="md:mt-10 mb-10 md:mb-16 flex flex-col md:flex-row justify-between gap-5 md:gap-20 relative">
+        <div className="md:mt-10 mb-10 md:mb-10 flex flex-col md:flex-row justify-between items-center gap-5 md:gap-20 relative">
           <div className="hidden md:block h-[2px] absolute left-52 right-1/2 top-1/2 -translate-y-1/2" style={{ backgroundColor: colorHandle }}></div>
           <div className="hidden md:block h-4 w-4 rounded-full absolute z-10 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 border-[2px]" style={{ backgroundColor: `${themeChange ? "#ecf0f3" : "#111111"}`, borderColor: colorHandle }}></div>
           <div className="w-full relative">
@@ -41,7 +41,7 @@ export default function Projects() {
             </div>
           </div>
         </div>
-        <div className="mb-10 md:mb-16 flex flex-col md:flex-row justify-between gap-5 md:gap-20 relative">
+        <div className="mb-10 md:mb-10 flex flex-col md:flex-row justify-between items-center gap-5 md:gap-20 relative">
           <div className="w-full text-left">
             <div>
               <h1 className="text-2xl md:text-3xl font-bold mb-0 md:mb-2" style={{ color: themeChange ? "black" : "white" }}>Infinite Scroll Project</h1>
@@ -65,7 +65,7 @@ export default function Projects() {
             </div>
           </div>
         </div>
-        <div className="mb-10 md:mb-16 flex flex-col md:flex-row justify-between gap-5 md:gap-20 relative">
+        <div className="mb-10 md:mb-10 flex flex-col md:flex-row justify-between items-center gap-5 md:gap-20 relative">
           <div className="hidden md:block h-[2px] absolute left-52 right-1/2 top-1/2 -translate-y-1/2 opacity-70" style={{ backgroundColor: colorHandle }}></div>
           <div className="hidden md:block h-4 w-4 rounded-full absolute z-10 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 border-[2px]" style={{ backgroundColor: `${themeChange ? "#ecf0f3" : "#111111"}`, borderColor: colorHandle }}></div>
           <div className="w-full relative">
@@ -89,7 +89,7 @@ export default function Projects() {
             </div>
           </div>
         </div>
-        <div className="mb-10 md:mb-16 flex flex-col md:flex-row justify-between gap-5 md:gap-20 relative">
+        <div className="mb-10 md:mb-10 flex flex-col md:flex-row justify-between items-center gap-5 md:gap-20 relative">
           <div className="w-full text-left">
             <div>
               <h1 className="text-2xl md:text-3xl font-bold mb-0 md:mb-2" style={{ color: themeChange ? "black" : "white" }}>Flipkart Clone</h1>
@@ -113,7 +113,7 @@ export default function Projects() {
             </div>
           </div>
         </div>
-        <div className="mb-10 md:mb-16 flex flex-col md:flex-row justify-between gap-5 md:gap-20 relative">
+        <div className="mb-10 md:mb-10 flex flex-col md:flex-row justify-between items-center gap-5 md:gap-20 relative">
           <div className="hidden md:block h-[2px] absolute left-52 right-1/2 top-1/2 -translate-y-1/2" style={{ backgroundColor: colorHandle }}></div>
           <div className="hidden md:block h-4 w-4 rounded-full absolute z-10 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 border-[2px]" style={{ backgroundColor: `${themeChange ? "#ecf0f3" : "#111111"}`, borderColor: colorHandle }}></div>
           <div className="w-full relative">
@@ -137,7 +137,7 @@ export default function Projects() {
             </div>
           </div>
         </div>
-        <div className="mb-10 md:mb-16 flex flex-col md:flex-row justify-between gap-5 md:gap-20 relative">
+        <div className="mb-10 md:mb-10 flex flex-col md:flex-row justify-between items-center gap-5 md:gap-20 relative">
           <div className="w-full text-left">
             <div>
               <h1 className="text-2xl md:text-3xl font-bold mb-0 md:mb-2" style={{ color: themeChange ? "black" : "white" }}>To do List Project</h1>
@@ -161,7 +161,7 @@ export default function Projects() {
             </div>
           </div>
         </div>
-        <div className="mb-10 md:mb-16 flex flex-col md:flex-row justify-between gap-5 md:gap-20 relative">
+        <div className="mb-10 md:mb-1 flex flex-col md:flex-row justify-between items-center gap-5 md:gap-20 relative">
           <div className="hidden md:block h-[2px] absolute left-52 right-1/2 top-1/2 -translate-y-1/2" style={{ backgroundColor: colorHandle }}></div>
           <div className="hidden md:block h-4 w-4 rounded-full absolute z-10 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 border-[2px]" style={{ backgroundColor: `${themeChange ? "#ecf0f3" : "#111111"}`, borderColor: colorHandle }}></div>
           <div className="w-full relative">
